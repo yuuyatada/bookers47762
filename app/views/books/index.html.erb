@@ -1,13 +1,16 @@
 <h1><storong>Books</storong></h1>
-<%= @books.each do |book| %>
+<% @books.each do |book| %>
 
   <p>Title</p>
   <span><%= book.title %></span> 
   
   <p>Body</p>
   <span><%= book.body %></span>
-<% end %>
 
+<p><a href="/books">Show</a></p>
+ <p><a href="/books">Edit</a></p>
+ <p><a href="/books">Destroy</a></p>
+<% end %>
 
   <h3><strong>New book</strong></h3>
   <%= form_with model: @book, url: '/books',  method: :post do |f| %>
