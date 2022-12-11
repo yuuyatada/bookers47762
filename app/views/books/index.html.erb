@@ -14,8 +14,11 @@
 <% end %>
 
 
+
   <h3><strong>New book</strong></h3>
-  <%= form_with model: @book, url: '/books',  method: :post do |f| %>
+  
+  <%= form_with model: @book do |f| %>
+  
   <p>Title</p>
   <%= f.text_field :title %>
 	
