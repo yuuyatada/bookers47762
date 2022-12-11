@@ -7,10 +7,12 @@
   <p>Body</p>
   <span><%= book.body %></span>
 
-<p><a href="/books">Show</a></p>
- <p><a href="/books">Edit</a></p>
- <p><a href="/books">Destroy</a></p>
+<%= link_to "Show", book_path(book.id) %>
+ <%= link_to "Edit", edit_book_path(book.id) %>
+<%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+
 <% end %>
+
 
   <h3><strong>New book</strong></h3>
   <%= form_with model: @book, url: '/books',  method: :post do |f| %>
