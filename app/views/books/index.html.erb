@@ -1,7 +1,7 @@
 <h1><storong>Books</storong></h1>
 <table width="300">
   <thead>
-    <tr>
+    <tr algin="center">
       <th><p>Title</p></th>
       <th><p>Body</p></th>
     </tr>
@@ -17,6 +17,7 @@
   <% end %>
 </table>
 
+
   <h3><strong>New book</strong></h3>
   
 <% if @book.errors.any? %>
@@ -27,13 +28,15 @@
     <% end %>
   </ul>
 <% end %>
-
+<table>
 <%= form_with model: @book do |f| %>
-  <p>Title</p>
-  <%= f.text_field :title %>
-  <p>Body</p>
-  <%= f.text_area :body %>
-  <%= f.submit 'Create Book' %>
+  <tr><p>Title</p></tr>
+  <tr><%= f.text_field :title %></tr>
+  <tr><p>Body</p></tr>
+  <tr><%= f.text_area :body %></tr>
+  
+  <tr><td><%= f.submit 'Create Book' %></td></tr>
+  
 <% end %>
- 
+ </table>
  

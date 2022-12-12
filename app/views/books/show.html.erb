@@ -1,11 +1,20 @@
 <%= flash[:notice] %>
 <%= flash[:non] %>
 
-<h2><strong>Title:</strong></h2><p><%= @book.title %></p>
+<table>
+<tr align="center">
+ <th><h4><strong>Title:</strong></h4></th>
+ <th><p><%= @book.title %></p></th>
+</tr>
+<tr align="center">
+ <th><h4><strong>Body:</strong></h4></th>
+ <th><p><%= @book.body %></p></th>
+</tr>
 
-<h2><strong>Body:</strong></h2><p><%= @book.body %></p>
 
-<%= link_to "Edit", edit_book_path(@book.id) %>|
-
- <p><a href="/books">Back</a></p>
- 
+<tr>
+ <th><%= link_to "Edit", edit_book_path(@book.id) %></th>
+ <th>|</th>
+ <th><p><a href="/books">Back</a></p></th>
+</tr>
+</table>
